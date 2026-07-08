@@ -33,7 +33,7 @@ const CSS = `
   --rose-2: #b23a52;
   --cream: #f5efe0;
   --muted: #8fb3a2;
-
+  
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
@@ -48,6 +48,7 @@ const CSS = `
 
 .tasbih-app *, .tasbih-app *::before, .tasbih-app *::after {
   box-sizing: border-box;
+  
 }
 
 .tasbih-app .hero {
