@@ -18,7 +18,7 @@ Error generating stack: `+e.message+`
   --rose-2: #b23a52;
   --cream: #f5efe0;
   --muted: #8fb3a2;
-  
+
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
@@ -33,7 +33,6 @@ Error generating stack: `+e.message+`
 
 .tasbih-app *, .tasbih-app *::before, .tasbih-app *::after {
   box-sizing: border-box;
-  
 }
 
 .tasbih-app .hero {
@@ -89,7 +88,7 @@ Error generating stack: `+e.message+`
 }
 
 .tasbih-app .tab:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .tasbih-app .tab.active {
@@ -131,14 +130,14 @@ Error generating stack: `+e.message+`
 
 .tasbih-app .heart-wrapper {
   --progress: 0;
-  width: clamp(190px, 46vw, 236px);
-  height: clamp(190px, 46vw, 236px);
+  width: clamp(180px, 46vw, 236px);
+  height: clamp(180px, 46vw, 236px);
   border-radius: 50%;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: conic-gradient(var(--gold) calc(var(--progress) * 1%), rgba(255, 255, 255, 1) 0);
+  background: conic-gradient(var(--gold) calc(var(--progress) * 1%), rgba(255, 255, 255, 0.08) 0);
   transition: background 0.35s ease;
 }
 
@@ -299,11 +298,11 @@ Error generating stack: `+e.message+`
 }
 
 .tasbih-app .reset-all {
-  margin-top: 36px;
+  margin-top: 16px;
   background: none;
   border: none;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -320,7 +319,7 @@ Error generating stack: `+e.message+`
 
 .tasbih-app footer p {
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   letter-spacing: 0.02em;
 }
@@ -333,4 +332,4 @@ Error generating stack: `+e.message+`
     gap: 6px;
   }
 }
-`;function g(){let[e,t]=(0,f.useState)(m[0].id),[n,r]=(0,f.useState)({subhanallah:0,alhamdulillah:0,allahuakbar:0}),[i,a]=(0,f.useState)(0),[o,s]=(0,f.useState)({subhanallah:33,alhamdulillah:33,allahuakbar:33}),c=m.find(t=>t.id===e),l=n[e],u=o[e],d=l%u,g=Math.floor(l/u),_=d/u*100;return(0,p.jsxs)(`div`,{className:`tasbih-app`,children:[(0,p.jsx)(`style`,{children:h}),(0,p.jsx)(`link`,{rel:`stylesheet`,href:`https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap`}),(0,p.jsxs)(`div`,{className:`hero`,children:[(0,p.jsx)(`p`,{className:`eyebrow`,children:`Digital Dhikr`}),(0,p.jsx)(`h1`,{children:`Tasbih Counter`}),(0,p.jsx)(`p`,{className:`sub`,children:`Keep count of your remembrance, one tap at a time`})]}),(0,p.jsx)(`div`,{className:`tabs`,role:`tablist`,children:m.map(n=>(0,p.jsxs)(`button`,{role:`tab`,"aria-selected":e===n.id,className:`tab ${e===n.id?`active`:``}`,onClick:()=>t(n.id),children:[(0,p.jsx)(`span`,{className:`tab-arabic`,dir:`rtl`,children:n.arabic}),(0,p.jsx)(`span`,{className:`tab-translit`,children:n.translit})]},n.id))}),(0,p.jsxs)(`div`,{className:`card`,children:[(0,p.jsx)(`p`,{className:`meaning`,children:c.meaning}),(0,p.jsx)(`div`,{className:`heart-wrapper`,style:{"--progress":_},children:(0,p.jsxs)(`button`,{id:`incrementBtn`,className:`heart-btn`,onClick:()=>{r(t=>({...t,[e]:t[e]+1})),a(e=>e+1)},"aria-label":`Count ${c.translit}, currently ${l}`,children:[(0,p.jsxs)(`svg`,{viewBox:`0 0 100 90`,className:`heart-svg`,"aria-hidden":`true`,children:[(0,p.jsx)(`defs`,{children:(0,p.jsxs)(`linearGradient`,{id:`heartGrad`,x1:`0%`,y1:`0%`,x2:`100%`,y2:`100%`,children:[(0,p.jsx)(`stop`,{offset:`0%`,stopColor:`var(--rose-1)`}),(0,p.jsx)(`stop`,{offset:`100%`,stopColor:`var(--rose-2)`})]})}),(0,p.jsx)(`path`,{d:`M50 88 C 18 62, -2 40, -2 20 C -2 2, 14 -8, 30 2 C 40 9, 50 22, 50 22 C 50 22, 60 9, 70 2 C 86 -8, 102 2, 102 20 C 102 40, 82 62, 50 88 Z`,fill:`url(#heartGrad)`})]}),(0,p.jsxs)(`div`,{className:`heart-content`,children:[(0,p.jsx)(`span`,{className:`count-number`,children:l}),(0,p.jsx)(`span`,{className:`count-hint`,children:`tap`})]})]},i)}),(0,p.jsxs)(`p`,{className:`progress-label`,children:[d,` / 33`,g>0&&(0,p.jsxs)(`span`,{className:`sets-badge`,children:[` · `,g,` set`,g>1?`s`:``,` complete`]})]}),(0,p.jsx)(`button`,{id:`resetBtn`,className:`reset-btn`,onClick:()=>{r(t=>({...t,[e]:0}))},children:`Reset`})]}),(0,p.jsx)(`button`,{className:`reset-all`,onClick:()=>{r({subhanallah:0,alhamdulillah:0,allahuakbar:0})},children:`Reset all tasbihs`}),(0,p.jsx)(`footer`,{id:`footer`,children:(0,p.jsx)(`p`,{children:`© 2026 Tasbih Counter. All rights reserved. With Love — NoorulShaik`})})]})}(0,d.createRoot)(document.getElementById(`root`)).render((0,p.jsx)(f.StrictMode,{children:(0,p.jsx)(g,{})}));
+`;function g(){let[e,t]=(0,f.useState)(m[0].id),[n,r]=(0,f.useState)({subhanallah:0,alhamdulillah:0,allahuakbar:0}),[i,a]=(0,f.useState)(0),[o,s]=(0,f.useState)({subhanallah:33,alhamdulillah:33,allahuakbar:33}),c=m.find(t=>t.id===e),l=n[e],u=o[e],d=l%u,g=Math.floor(l/u),_=d/u*100,v=()=>{r(t=>({...t,[e]:t[e]+1})),a(e=>e+1)},y=t=>{let n=Math.min(999,Math.max(1,t||1));s(t=>({...t,[e]:n}))},b=e=>y(u+e);return(0,p.jsxs)(`div`,{className:`tasbih-app`,children:[(0,p.jsx)(`style`,{children:h}),(0,p.jsx)(`link`,{rel:`stylesheet`,href:`https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap`}),(0,p.jsxs)(`div`,{className:`hero`,children:[(0,p.jsx)(`p`,{className:`eyebrow`,children:`Digital Dhikr`}),(0,p.jsx)(`h1`,{children:`Tasbih Counter`}),(0,p.jsx)(`p`,{className:`sub`,children:`Keep count of your remembrance, one tap at a time`})]}),(0,p.jsx)(`div`,{className:`tabs`,role:`tablist`,children:m.map(n=>(0,p.jsxs)(`button`,{role:`tab`,"aria-selected":e===n.id,className:`tab ${e===n.id?`active`:``}`,onClick:()=>t(n.id),children:[(0,p.jsx)(`span`,{className:`tab-arabic`,dir:`rtl`,children:n.arabic}),(0,p.jsx)(`span`,{className:`tab-translit`,children:n.translit})]},n.id))}),(0,p.jsxs)(`div`,{className:`card`,children:[(0,p.jsx)(`p`,{className:`meaning`,children:c.meaning}),(0,p.jsx)(`div`,{className:`heart-wrapper`,style:{"--progress":_},children:(0,p.jsxs)(`button`,{id:`incrementBtn`,className:`heart-btn`,onClick:v,"aria-label":`Count ${c.translit}, currently ${l}`,children:[(0,p.jsxs)(`svg`,{viewBox:`0 0 100 90`,className:`heart-svg`,"aria-hidden":`true`,children:[(0,p.jsx)(`defs`,{children:(0,p.jsxs)(`linearGradient`,{id:`heartGrad`,x1:`0%`,y1:`0%`,x2:`100%`,y2:`100%`,children:[(0,p.jsx)(`stop`,{offset:`0%`,stopColor:`var(--rose-1)`}),(0,p.jsx)(`stop`,{offset:`100%`,stopColor:`var(--rose-2)`})]})}),(0,p.jsx)(`path`,{d:`M50 88 C 18 62, -2 40, -2 20 C -2 2, 14 -8, 30 2 C 40 9, 50 22, 50 22 C 50 22, 60 9, 70 2 C 86 -8, 102 2, 102 20 C 102 40, 82 62, 50 88 Z`,fill:`url(#heartGrad)`})]}),(0,p.jsxs)(`div`,{className:`heart-content`,children:[(0,p.jsx)(`span`,{className:`count-number`,children:l}),(0,p.jsx)(`span`,{className:`count-hint`,children:`tap`})]})]},i)}),(0,p.jsxs)(`p`,{className:`progress-label`,children:[d,` / `,u,g>0&&(0,p.jsxs)(`span`,{className:`sets-badge`,children:[` · `,g,` set`,g>1?`s`:``,` complete`]})]}),(0,p.jsxs)(`div`,{className:`target-row`,children:[(0,p.jsx)(`span`,{className:`target-label`,children:`Target`}),(0,p.jsx)(`button`,{type:`button`,className:`target-btn`,onClick:()=>b(-1),"aria-label":`Decrease target`,children:`−`}),(0,p.jsx)(`input`,{type:`number`,className:`target-input`,value:u,min:1,max:999,onChange:e=>y(parseInt(e.target.value,10))}),(0,p.jsx)(`button`,{type:`button`,className:`target-btn`,onClick:()=>b(1),"aria-label":`Increase target`,children:`+`})]}),(0,p.jsx)(`button`,{id:`resetBtn`,className:`reset-btn`,onClick:()=>{r(t=>({...t,[e]:0}))},children:`Reset`})]}),(0,p.jsx)(`button`,{className:`reset-all`,onClick:()=>{r({subhanallah:0,alhamdulillah:0,allahuakbar:0})},children:`Reset all tasbihs`}),(0,p.jsx)(`footer`,{id:`footer`,children:(0,p.jsx)(`p`,{children:`© 2026 Tasbih Counter. All rights reserved. With Love — NoorulShaik`})})]})}(0,d.createRoot)(document.getElementById(`root`)).render((0,p.jsx)(f.StrictMode,{children:(0,p.jsx)(g,{})}));
