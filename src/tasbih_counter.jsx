@@ -133,7 +133,7 @@ const CSS = `
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 60px rgba(41, 159, 104, 0.34);
 }
 
 .tasbih-app .meaning {
